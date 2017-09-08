@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>next</title>
+  <title>陈传银</title>
   
-  
+  <subtitle>尔东人专金艮</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chenchuanyin.github.io/"/>
