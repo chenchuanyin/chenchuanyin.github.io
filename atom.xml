@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Silver Chen</title>
+  <title>Silver Chan</title>
   
   <subtitle>传银的博客</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chenchuanyin.github.io/"/>
-  <updated>2017-09-15T12:51:46.000Z</updated>
+  <updated>2017-11-07T08:32:27.149Z</updated>
   <id>http://chenchuanyin.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GLIDE不能下载golang.org/x包的替代方案</title>
+    <link href="http://chenchuanyin.github.io/2017/11/07/%E4%BF%AE%E5%A4%8DGO%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7GLIDE%E4%B8%8D%E8%83%BD%E8%AE%BF%E9%97%AEgolang.org%E7%9A%84%E6%9B%BF%E4%BB%A3%E6%96%B9%E6%A1%88/"/>
+    <id>http://chenchuanyin.github.io/2017/11/07/修复GO包管理工具GLIDE不能访问golang.org的替代方案/</id>
+    <published>2017-11-07T08:32:09.703Z</published>
+    <updated>2017-11-07T08:32:27.149Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>glide是go的一个包管理工具，可以直接扫描工程管理import依赖。而golang.org/x下的包是viper、logrus等github开源包的依赖，国内又不能访问。一个好消息是golang.org/x在github上有镜像(github.com/golang)。下面是我尝试成功的替代方案。</p></blockquote><p>如果你的go工程中需要golang.org/x/net，就可以在glide.yaml中加入以下配置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">- package: golang.org/x/net</div><div class="line">  repo:    git@github.com:golang/net.git</div><div class="line">  vcs:     git</div></pre></td></tr></table></figure></p><p>这样就可以从github.com镜像中下载相关库了。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;glide是go的一个包管理工具，可以直接扫描工程管理import依赖。而golang.org/x下的包是viper、logrus等github开源包的依赖，国内又不能访问。一个好消息是golang.org/x在github上有镜像(github.
+      
+    
+    </summary>
+    
+    
+      <category term="GO,GLIDE,库管理" scheme="http://chenchuanyin.github.io/tags/GO-GLIDE-%E5%BA%93%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
   
   <entry>
     <title>记一次xgboost内存泄漏调试</title>
@@ -29,27 +53,6 @@
     
     
       <category term="gcc,gdb,调试，xgboost" scheme="http://chenchuanyin.github.io/tags/gcc-gdb-%E8%B0%83%E8%AF%95%EF%BC%8Cxgboost/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>记录我的第一篇博客</title>
-    <link href="http://chenchuanyin.github.io/2017/09/08/hello-world/"/>
-    <id>http://chenchuanyin.github.io/2017/09/08/hello-world/</id>
-    <published>2017-09-08T00:48:38.000Z</published>
-    <updated>2017-09-08T04:07:46.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-      
-    
-    </summary>
-    
     
   </entry>
   
