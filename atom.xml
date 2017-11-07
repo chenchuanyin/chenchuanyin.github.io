@@ -63,20 +63,4 @@
     
   </entry>
   
-  <entry>
-    <title>记一次xgboost内存泄漏调试</title>
-    <link href="http://chenchuanyin.github.io/2017/09/11/%E8%AE%B0%E4%B8%80%E6%AC%A1xgboost%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F%E8%B0%83%E8%AF%95/"/>
-    <id>http://chenchuanyin.github.io/2017/09/11/记一次xgboost内存泄漏调试/</id>
-    <published>2017-09-11T07:14:20.000Z</published>
-    <updated>2017-09-15T12:51:46.000Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-      <category term="gcc,gdb,调试，xgboost" scheme="http://chenchuanyin.github.io/tags/gcc-gdb-%E8%B0%83%E8%AF%95%EF%BC%8Cxgboost/"/>
-    
-  </entry>
-  
 </feed>
