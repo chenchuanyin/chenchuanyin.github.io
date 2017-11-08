@@ -67,9 +67,9 @@
     <link href="http://chenchuanyin.github.io/2017/11/07/%E4%BF%AE%E5%A4%8DGO%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7GLIDE%E4%B8%8D%E8%83%BD%E8%AE%BF%E9%97%AEgolang.org%E7%9A%84%E6%9B%BF%E4%BB%A3%E6%96%B9%E6%A1%88/"/>
     <id>http://chenchuanyin.github.io/2017/11/07/修复GO包管理工具GLIDE不能访问golang.org的替代方案/</id>
     <published>2017-11-07T08:32:09.703Z</published>
-    <updated>2017-11-08T08:32:47.078Z</updated>
+    <updated>2017-11-08T08:34:34.853Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>glide是go的一个包管理工具，可以直接扫描工程管理import依赖。而golang.org/x下的包是viper、logrus等github开源包的依赖，国内又不能访问。一个好消息是golang.org/x在github上有镜像(github.com/golang)。下面是我尝试成功的替代方案。</p></blockquote><p>如果go工程中有golang.org/x/net的依赖，就可以在glide.yaml中加入以下配置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">- package: golang.org/x/net</div><div class="line">  repo:    https://github.com:golang/net.git</div><div class="line">  vcs:     git</div></pre></td></tr></table></figure></p><p><code>glide install/update</code>这样就可以从github.com镜像中下载相关库了。</p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>glide是go的一个包管理工具，可以直接扫描工程管理import依赖。而golang.org/x下的包是viper、logrus等github开源包的依赖，国内又不能访问。一个好消息是golang.org/x在github上有镜像(github.com/golang)。下面是我尝试成功的替代方案。</p></blockquote><p>如果go工程中有golang.org/x/net的依赖，就可以在glide.yaml中加入以下配置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">- package: golang.org/x/net</div><div class="line">  repo:    https://github.com:golang/net.git</div><div class="line">  vcs:     git</div></pre></td></tr></table></figure></p><p>这样<code>glide install/update</code>就可以从github.com镜像中下载相关库了。</p>]]></content>
     
     <summary type="html">
     
