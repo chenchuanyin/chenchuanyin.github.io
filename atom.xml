@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chenchuanyin.github.io/"/>
-  <updated>2017-11-07T09:13:56.015Z</updated>
+  <updated>2017-11-08T08:59:12.286Z</updated>
   <id>http://chenchuanyin.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>交叉编译工具远程调试小结</title>
+    <link href="http://chenchuanyin.github.io/2017/11/08/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%B7%A5%E5%85%B7%E8%BF%9C%E7%A8%8B%E8%B0%83%E8%AF%95%E6%80%BB%E7%BB%93/"/>
+    <id>http://chenchuanyin.github.io/2017/11/08/交叉编译工具远程调试总结/</id>
+    <published>2017-11-08T08:48:08.634Z</published>
+    <updated>2017-11-08T08:59:12.286Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>我们在开发ARM板子C/C++项目过程中，我们会需要查找定位BUG，一种方式是通过网络发送日志；另一种方式是通过调试方式，而板子上经常没有配备GDB命令，也很难运行GDB命令，我们需要远程调试的方式来进行调试。现在总结下我们在尝试的方式。</p></blockquote><h1 id="调试启动过程中出现的BUG"><a href="#调试启动过程中出现的BUG" class="headerlink" title="调试启动过程中出现的BUG"></a>调试启动过程中出现的BUG</h1><h2 id="调试运行过程中出现的BUG"><a href="#调试运行过程中出现的BUG" class="headerlink" title="调试运行过程中出现的BUG"></a>调试运行过程中出现的BUG</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;我们在开发ARM板子C/C++项目过程中，我们会需要查找定位BUG，一种方式是通过网络发送日志；另一种方式是通过调试方式，而板子上经常没有配备GDB命令，也很难运行GDB命令，我们需要远程调试的方式来进行调试。现在总结下我们在尝试的方式。&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="gdb" scheme="http://chenchuanyin.github.io/tags/gdb/"/>
+    
+      <category term="arm" scheme="http://chenchuanyin.github.io/tags/arm/"/>
+    
+  </entry>
   
   <entry>
     <title>git status中文显示不对问题修复</title>
