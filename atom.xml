@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chenchuanyin.github.io/"/>
-  <updated>2017-11-08T08:59:12.286Z</updated>
+  <updated>2017-11-08T09:40:05.602Z</updated>
   <id>http://chenchuanyin.github.io/</id>
   
   <author>
@@ -21,25 +21,23 @@
     <link href="http://chenchuanyin.github.io/2017/11/08/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%B7%A5%E5%85%B7%E8%BF%9C%E7%A8%8B%E8%B0%83%E8%AF%95%E6%80%BB%E7%BB%93/"/>
     <id>http://chenchuanyin.github.io/2017/11/08/交叉编译工具远程调试总结/</id>
     <published>2017-11-08T08:48:08.634Z</published>
-    <updated>2017-11-08T08:59:12.286Z</updated>
+    <updated>2017-11-08T09:40:05.602Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>我们在开发ARM板子C/C++项目过程中，我们会需要查找定位BUG，一种方式是通过网络发送日志；另一种方式是通过调试方式，而板子上经常没有配备GDB命令，也很难运行GDB命令，我们需要远程调试的方式来进行调试。现在总结下我们在尝试的方式。</p></blockquote><h1 id="调试启动过程中出现的BUG"><a href="#调试启动过程中出现的BUG" class="headerlink" title="调试启动过程中出现的BUG"></a>调试启动过程中出现的BUG</h1><h2 id="调试运行过程中出现的BUG"><a href="#调试运行过程中出现的BUG" class="headerlink" title="调试运行过程中出现的BUG"></a>调试运行过程中出现的BUG</h2>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>我们在开发ARM板子C/C++项目过程中，我们会需要查找定位BUG，一种方式是通过网络发送日志；另一种方式是通过调试方式，而很多板子没有执行GDB性能，<br>因此我们需要远程调试的方式来进行调试。现在总结下项目中使用的两种方式。</p></blockquote><h2 id="调试可执行程序"><a href="#调试可执行程序" class="headerlink" title="调试可执行程序"></a>调试可执行程序</h2><ol><li>环境准备：一台装有交叉编译工具链的机器A，一般是linux操作系统的机器；被调试程序的机器B上装有gdbserver</li><li>首先拷贝调试所需要的库及可执行程序到机器A上(【注】需要no-strip，带debug信息的库和可执行程序，可以通过<code>file</code>或<code>info shared</code>查看)</li><li><p>A机器准备gdb启动脚本.gdbinit，模板类似于：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">set solid-search-path [调试库目录]</div><div class="line">file [需要调试可执行程序]</div><div class="line">target [调试可执行程序的机器ip]:[gdbserver暴露出来的端口号]</div></pre></td></tr></table></figure></li><li><p>B机器准备gdbserver启动脚本，模板类似于：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gdbserver :[暴露出来的端口号] 可执行程序</div></pre></td></tr></table></figure></li><li><p>A机器gdb启动后，紧接着启动B机器脚本；这个时候A机器的gdb窗口进入可调试状态，我们可以设置断点或者查看线程栈信息，输入<code>c</code>程序继续执行，<code>Ctrl-c</code>进入打断状态</p></li></ol><h2 id="调试正在运行的进程"><a href="#调试正在运行的进程" class="headerlink" title="调试正在运行的进程"></a>调试正在运行的进程</h2><ol><li>调试环境、拷贝相关库及可执行程序、A机器准备的gdb脚本和调试可执行程序相同，只是通过attach的方式来调试</li><li>A机器gdb启动后，紧接着B机器执行如下命令：<br><code>``codegdbserver :[暴露出来的端口号] --attach [进程ID**</code><em>**</em><br>这个时候A机器的gdb窗口进入可调试状态。</li></ol><p>这两种方式各有各的使用场景：<strong>调试可执行程序</strong>适合调试进程启动时候出现的BUG，<strong>调试正在运行的进程</strong>适合调试进程BUG已经出现的场景。</p>]]></content>
     
     <summary type="html">
     
       
       
         &lt;blockquote&gt;
-&lt;p&gt;我们在开发ARM板子C/C++项目过程中，我们会需要查找定位BUG，一种方式是通过网络发送日志；另一种方式是通过调试方式，而板子上经常没有配备GDB命令，也很难运行GDB命令，我们需要远程调试的方式来进行调试。现在总结下我们在尝试的方式。&lt;/p&gt;
-
+&lt;p&gt;我们在开发ARM板子C/C++项目过程中，我们会需要查找定位BUG，一种方式是通过网络发送日志；另一种方式是通过调试方式，而很多板子没有执行GDB性能，&lt;br&gt;因此我们需要远程调试的方式来进行调试。现在总结下项目中使用的两种方式。&lt;/p&gt;
+&lt;/bl
       
     
     </summary>
     
     
       <category term="gdb" scheme="http://chenchuanyin.github.io/tags/gdb/"/>
-    
-      <category term="arm" scheme="http://chenchuanyin.github.io/tags/arm/"/>
     
   </entry>
   
