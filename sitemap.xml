@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://chenchuanyin.github.io/about/index.html</loc>
+    
+    <lastmod>2017-11-08T13:17:10.009Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://chenchuanyin.github.io/2017/11/08/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%B7%A5%E5%85%B7%E8%BF%9C%E7%A8%8B%E8%B0%83%E8%AF%95%E6%80%BB%E7%BB%93/</loc>
     
     <lastmod>2017-11-08T09:51:08.509Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>http://chenchuanyin.github.io/2017/11/07/git%20status%E4%B8%AD%E6%96%87%E6%98%BE%E7%A4%BA%E4%B8%8D%E5%87%BA%E6%9D%A5%E9%97%AE%E9%A2%98%E4%BF%AE%E5%A4%8D/</loc>
     
     <lastmod>2017-11-07T09:13:56.015Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chenchuanyin.github.io/about/index.html</loc>
-    
-    <lastmod>2017-11-07T09:02:07.281Z</lastmod>
     
   </url>
   
