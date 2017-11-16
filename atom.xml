@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chenchuanyin.github.io/"/>
-  <updated>2017-11-13T11:57:14.874Z</updated>
+  <updated>2017-11-16T04:02:44.529Z</updated>
   <id>http://chenchuanyin.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>golang目录结构及工具</title>
+    <link href="http://chenchuanyin.github.io/2017/11/16/golang%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84%E4%B8%8E%E5%B7%A5%E5%85%B7/"/>
+    <id>http://chenchuanyin.github.io/2017/11/16/golang目录结构与工具/</id>
+    <published>2017-11-16T03:41:15.289Z</published>
+    <updated>2017-11-16T04:02:44.529Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>在开发golang组件的时候需要版本管理及组件管理，自己形成了一套模式框架，对于常规项目开发可以方便套用。</p></blockquote><h1 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h1><ul><li>使用glide工具进行第三方版本包管理，不用依赖环境变量$GOPATH</li><li>使用makefile作为脚本工具，进行下载三方包，构建，打包</li><li>使用emacs+gocode来进行代码编写</li></ul><h1 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">├── Makefile       :脚本</div><div class="line">├── bin            :组件产物输出目录，不用进行版本管理</div><div class="line">├── conf           :配置脚本</div><div class="line">├── glide.lock     :glide生成的文件</div><div class="line">├── glide.yaml     :glide生成的文件</div><div class="line">├── pkg            :gocode需要根据这个目录.a文件进行自动补全</div><div class="line">├── src            :源代码目录</div><div class="line">└── vendor         :glide下载的三方代码放置在这个目录，不用进行版本管理</div></pre></td></tr></table></figure><ul><li><p>Makefile的模板如下：</p><figure class="highlight makefile"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line">PWD := <span class="variable">$(<span class="built_in">shell</span> pwd)</span></div><div class="line">GO := go</div><div class="line">GLIDE := glide</div><div class="line">GOCODE := gocode</div><div class="line">TARGET := IATOpenAPI</div><div class="line">VENDOR := $&#123;PWD&#125;/vendor</div><div class="line">GOPATH := $&#123;PWD&#125;/gopath</div><div class="line">OUT := $&#123;PWD&#125;/bin/</div><div class="line">OUT_TARGET := $&#123;PWD&#125;/bin/$&#123;TARGET&#125;</div><div class="line"></div><div class="line"><span class="comment">#批量工具</span></div><div class="line"><span class="section">all: deps build package</span></div><div class="line"></div><div class="line"><span class="comment">#生成glide.yaml文件</span></div><div class="line"><span class="section">init:</span></div><div class="line">rm -f glide.yaml</div><div class="line"><span class="keyword">export</span> GOPATH=$&#123;PWD&#125; &amp;&amp; $&#123;GLIDE&#125; init</div><div class="line"></div><div class="line"><span class="comment">#下载三方依赖包</span></div><div class="line"><span class="section">deps:</span></div><div class="line">rm  -rf $&#123;GOPATH&#125;/src</div><div class="line">mkdir -p $&#123;GOPATH&#125;/src</div><div class="line"><span class="keyword">export</span> GOPATH=$&#123;PWD&#125; &amp;&amp; $&#123;GLIDE&#125; install</div><div class="line">ln -s $&#123;VENDOR&#125;/* $&#123;GOPATH&#125;/src/</div><div class="line"></div><div class="line"><span class="comment">#构建</span></div><div class="line"><span class="section">build:</span></div><div class="line"><span class="keyword">export</span> GOPATH=$&#123;PWD&#125;:$&#123;GOPATH&#125; &amp;&amp; $&#123;GO&#125; build -o $&#123;OUT_TARGET&#125; $&#123;PWD&#125;/src/main.go</div><div class="line"></div><div class="line"><span class="comment">#清理</span></div><div class="line"><span class="section">clean:</span></div><div class="line">rm -fr $&#123;OUT&#125;/*</div><div class="line"></div><div class="line"><span class="comment">#打包</span></div><div class="line"><span class="section">package:</span></div><div class="line">cd $&#123;OUT&#125; &amp;&amp; tar cvzf mock.tar.gz $&#123;TARGET&#125; config.yaml</div><div class="line"></div><div class="line"><span class="comment">#gocode需要依赖环境变量$GOPATH来选中pkg，因此通过使用脚本来启动gocode</span></div><div class="line"><span class="section">gocode:</span></div><div class="line">$&#123;GOCODE&#125; close</div><div class="line">GOPATH=$&#123;PWD&#125; $&#123;GOCODE&#125; -s &amp;</div></pre></td></tr></table></figure></li><li><p>glide支持三方包管理，但国内经常访问不了golang.org等网站，需要使用<a href="https://chenchuanyin.github.io/2017/11/07/%E4%BF%AE%E5%A4%8DGO%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7GLIDE%E4%B8%8D%E8%83%BD%E8%AE%BF%E9%97%AEgolang.org%E7%9A%84%E6%9B%BF%E4%BB%A3%E6%96%B9%E6%A1%88/">镜像或代理</a>的方式访问。</p></li><li><p>emacs配置go编码环境<br>我是emacs重度使用者，coding的时候会优先选择emacs。 经过一段时间的探索，常规项目可以通过emacs下编写go代码，自动补全。</p></li></ul><ol><li>自动补全配置：spacemacs打开两个layer:go,autocomplete；gocode使用到了$GOPATH，需要根据项目目录来配置$GOPATH，配置启动方式我放在makefile脚本里。</li><li>代码跳转配置：go-guru使用到了环境变量$GOPATH，因此根据项目目录来配置$GOPATH，配置方式可以通过打开emacs后<code>M-x setenv &lt;RET&gt; GOPATH &lt;RET&gt; GO_DIRS</code>来设置。</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;在开发golang组件的时候需要版本管理及组件管理，自己形成了一套模式框架，对于常规项目开发可以方便套用。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;工具&quot;&gt;&lt;a href=&quot;#工具&quot; class=&quot;headerlink&quot; title=&quot;
+      
+    
+    </summary>
+    
+      <category term="学习" scheme="http://chenchuanyin.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="golang" scheme="http://chenchuanyin.github.io/tags/golang/"/>
+    
+  </entry>
   
   <entry>
     <title>Makefile中重复创建目录提示错误的解决方案</title>
@@ -148,9 +176,9 @@
     <link href="http://chenchuanyin.github.io/2017/11/07/%E4%BF%AE%E5%A4%8DGO%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7GLIDE%E4%B8%8D%E8%83%BD%E8%AE%BF%E9%97%AEgolang.org%E7%9A%84%E6%9B%BF%E4%BB%A3%E6%96%B9%E6%A1%88/"/>
     <id>http://chenchuanyin.github.io/2017/11/07/修复GO包管理工具GLIDE不能访问golang.org的替代方案/</id>
     <published>2017-11-07T08:32:09.703Z</published>
-    <updated>2017-11-14T06:25:43.020Z</updated>
+    <updated>2017-11-14T06:36:50.607Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>glide是go的一个包管理工具，可以直接扫描工程管理import依赖。而golang.org/x下的包是viper、logrus等github开源包的依赖，国内又不能访问。一个好消息是golang.org/x在github上有镜像(github.com/golang)。下面是我尝试成功的替代方案。</p></blockquote><p>如果go工程中有golang.org/x/net的依赖，就可以在glide.yaml中加入以下配置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">- package: golang.org/x/net</div><div class="line">  repo:    https://github.com:golang/net.git</div><div class="line">  vcs:     git</div></pre></td></tr></table></figure></p><p>这样<code>glide install/update</code>就可以从github.com镜像中下载相关库了。</p><p>另一种方式通过代理的方式配置go下载：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span>127.0.0.1:9999是sock5代理地址</div><div class="line">alias go="socks5://127.0.0.1:9999 https_proxy=socks5://127.0.0.1:9999 go"</div></pre></td></tr></table></figure></p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>glide是go的一个包管理工具，可以直接扫描工程管理import依赖。而golang.org/x下的包是viper、logrus等github开源包的依赖，国内又不能访问。一个好消息是golang.org/x在github上有镜像(github.com/golang)。下面是我尝试成功的替代方案。</p></blockquote><p>如果go工程中有golang.org/x/net的依赖，就可以在glide.yaml中加入以下配置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">- package: golang.org/x/net</div><div class="line">  repo:    https://github.com:golang/net.git</div><div class="line">  vcs:     git</div></pre></td></tr></table></figure></p><p>这样<code>glide install/update</code>就可以从github.com镜像中下载相关库了。</p><p>另一种方式通过代理的方式配置go下载：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span>127.0.0.1:9999是sock5代理地址</div><div class="line">alias go="http_proxy=socks5://127.0.0.1:9999 https_proxy=socks5://127.0.0.1:9999 go"</div></pre></td></tr></table></figure></p>]]></content>
     
     <summary type="html">
     
