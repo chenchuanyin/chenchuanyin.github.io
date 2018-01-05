@@ -1,329 +1,642 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
   <head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-  <meta name="description" content="记录生活点滴">
-  <meta name="keyword" content="hexo-theme, vuejs">
-  
-    <link rel="shortcut icon" href="/css/images/logo.png">
-  
-  <title>
     
-      Silver Chan
-    
-  </title>
-  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
-  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
-<link rel="stylesheet" href="/css/plugins/gitment.css">
-  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-  <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
-  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
-  <script src="/js/qrious.js"></script>
-<script src="/js/gitment.js"></script>
-</head>
-<div class="wechat-share">
-  <img src="/css/images/logo.png" />
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="记录生活点滴"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Silver Chan">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0" />
+
+
+
+<link rel="canonical" href="http://chenchuanyin.github.io/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
+
+
+
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+    <title> Silver Chan </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">Silver Chan</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 </div>
 
-  <body>
-    <header class="header fixed-header">
-  <div class="header-container">
-    <a class="home-link" href="/">
-      <div class="logo"></div>
-      <span>Silver Chan</span>
-    </a>
-    <ul class="right-list">
-      
-        <li class="list-item">
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/">
+        <li class="mobile-menu-item">
           
-            <a href="/" class="item-link active">Home</a>
+          
+            首页
           
         </li>
-      
-        <li class="list-item">
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
           
-            <a href="/tags/" class="item-link">Tags</a>
           
-        </li>
-      
-        <li class="list-item">
-          
-            <a href="/archives/" class="item-link">Archives</a>
+            归档
           
         </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">Silver Chan</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
       
-        <li class="list-item">
-          
-            <a href="/project/" class="item-link">Projects</a>
-          
+        <li class="menu-item">
+          <a class="menu-item-link" href="/">
+            
+            
+              首页
+            
+          </a>
         </li>
       
-        <li class="list-item">
-          
-            <a href="/about/" class="item-link">About</a>
-          
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
         </li>
       
     </ul>
-    <div class="menu">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts">
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          <a class="post-link" href="/2017/11/16/golang目录结构与工具/">golang目录结构及工具</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2017-11-16
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/学习/">学习</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+
+        
+          <blockquote>
+<p>在开发golang组件的时候需要版本管理及组件管理，自己形成了一套模式框架，对于常规项目开发可以方便套用。</p>
+</blockquote>
+<h1 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h1><ul>
+<li>使用glide工具进行第三方版本包管理，不用依赖环境变量$GOPATH</li>
+<li>使用makefile作为脚本工具，进行下载三方包，构建，打包</li>
+<li>使用emacs+gocode来进行代码编写</li>
+</ul>
+<h1 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">├── Makefile       :脚本</div><div class="line">├── bin            :组件产物输出目录，不用进行版本管理</div><div class="line">├── conf           :配置脚本</div><div class="line">├── glide.lock     :glide生成的文件</div><div class="line">├── glide.yaml     :glide生成的文件</div><div class="line">├── pkg            :gocode需要根据这个目录.a文件进行自动补全</div><div class="line">├── src            :源代码目录</div><div class="line">└── vendor         :glide下载的三方代码放置在这个目录，不用进行版本管理</div></pre></td></tr></table></figure>
+<ul>
+<li><p>Makefile的模板如下：</p>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line">PWD := <span class="variable">$(<span class="built_in">shell</span> pwd)</span></div><div class="line">GO := go</div><div class="line">GLIDE := glide</div><div class="line">GOCODE := gocode</div><div class="line">TARGET := IATOpenAPI</div><div class="line">VENDOR := $&#123;PWD&#125;/vendor</div><div class="line">GOPATH := $&#123;PWD&#125;/gopath</div><div class="line">OUT := $&#123;PWD&#125;/bin/</div><div class="line">OUT_TARGET := $&#123;PWD&#125;/bin/$&#123;TARGET&#125;</div><div class="line"></div><div class="line"><span class="comment">#批量工具</span></div><div class="line"><span class="section">all: deps build package</span></div><div class="line"></div><div class="line"><span class="comment">#生成glide.yaml文件</span></div><div class="line"><span class="section">init:</span></div><div class="line">	rm -f glide.yaml</div><div class="line">	<span class="keyword">export</span> GOPATH=$&#123;PWD&#125; &amp;&amp; $&#123;GLIDE&#125; init</div><div class="line"></div><div class="line"><span class="comment">#下载三方依赖包</span></div><div class="line"><span class="section">deps:</span></div><div class="line">	rm  -rf $&#123;GOPATH&#125;/src</div><div class="line">	mkdir -p $&#123;GOPATH&#125;/src</div><div class="line">	<span class="keyword">export</span> GOPATH=$&#123;PWD&#125; &amp;&amp; $&#123;GLIDE&#125; install</div><div class="line">	ln -s $&#123;VENDOR&#125;/* $&#123;GOPATH&#125;/src/</div><div class="line"></div><div class="line"><span class="comment">#构建</span></div><div class="line"><span class="section">build:</span></div><div class="line">	<span class="keyword">export</span> GOPATH=$&#123;PWD&#125;:$&#123;GOPATH&#125; &amp;&amp; $&#123;GO&#125; build -o $&#123;OUT_TARGET&#125; $&#123;PWD&#125;/src/main.go</div><div class="line"></div><div class="line"><span class="comment">#清理</span></div><div class="line"><span class="section">clean:</span></div><div class="line">	rm -fr $&#123;OUT&#125;/*</div><div class="line"></div><div class="line"><span class="comment">#打包</span></div><div class="line"><span class="section">package:</span></div><div class="line">	cd $&#123;OUT&#125; &amp;&amp; tar cvzf mock.tar.gz $&#123;TARGET&#125; config.yaml</div><div class="line"></div><div class="line"><span class="comment">#gocode需要依赖环境变量$GOPATH来选中pkg，因此通过使用脚本来启动gocode</span></div><div class="line"><span class="section">gocode:</span></div><div class="line">	$&#123;GOCODE&#125; close</div><div class="line">	GOPATH=$&#123;PWD&#125; $&#123;GOCODE&#125; -s &amp;</div></pre></td></tr></table></figure>
+</li>
+<li><p>glide支持三方包管理，但国内经常访问不了golang.org等网站，需要使用<a href="https://chenchuanyin.github.io/2017/11/07/%E4%BF%AE%E5%A4%8DGO%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7GLIDE%E4%B8%8D%E8%83%BD%E8%AE%BF%E9%97%AEgolang.org%E7%9A%84%E6%9B%BF%E4%BB%A3%E6%96%B9%E6%A1%88/">镜像或代理</a>的方式访问。</p>
+</li>
+<li><p>emacs配置go编码环境<br>我是emacs重度使用者，coding的时候会优先选择emacs。 经过一段时间的探索，常规项目可以通过emacs下编写go代码，自动补全。</p>
+</li>
+</ul>
+<ol>
+<li>自动补全配置：spacemacs打开两个layer:go,autocomplete；gocode使用到了$GOPATH，需要根据项目目录来配置$GOPATH，配置启动方式我放在makefile脚本里。</li>
+<li>代码跳转配置：go-guru使用到了环境变量$GOPATH，因此根据项目目录来配置$GOPATH，配置方式可以通过打开emacs后<code>M-x setenv &lt;RET&gt; GOPATH &lt;RET&gt; GO_DIRS</code>来设置。</li>
+</ol>
+
+        
+      
     </div>
-    <div class="menu-mask">
-      <ul class="menu-list">
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
         
-          <li class="menu-item">
-            
-              <a href="/" class="menu-link mobile-active">Home</a>
-            
-          </li>
+          <a class="post-link" href="/2017/11/13/Makefile中创建已存在目录提示错误的解决方案/">Makefile中重复创建目录提示错误的解决方案</a>
         
-          <li class="menu-item">
-            
-              <a href="/tags/" class="menu-link">Tags</a>
-            
-          </li>
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2017-11-13
+        </span>
         
-          <li class="menu-item">
+          <div class="post-category">
             
-              <a href="/archives/" class="menu-link">Archives</a>
+              <a href="/categories/学习/">学习</a>
             
-          </li>
+          </div>
         
-          <li class="menu-item">
-            
-              <a href="/project/" class="menu-link">Projects</a>
-            
-          </li>
         
-          <li class="menu-item">
-            
-              <a href="/about/" class="menu-link">About</a>
-            
-          </li>
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
         
-      </ul>
+        
+
+        
+          <p>如题，我们经常需要在构建脚本Makefile中创建目录。例如下面一段脚本：<br><figure class="highlight makefile"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="section">deps:</span></div><div class="line">	git submodule update --init --recursive</div><div class="line">	mkdir -p out</div><div class="line"></div><div class="line"><span class="section">build:</span></div><div class="line">	cd out &amp;&amp; cmake -DBUILD_TESTING=OFF ../ &amp;&amp; make -j8</div><div class="line"></div><div class="line"><span class="section">package: deps build</span></div><div class="line"></div><div class="line"><span class="section">clean:</span></div><div class="line">	rm -rf out/*</div></pre></td></tr></table></figure></p>
+<p>在<code>out</code>目录已存在后执行<code>make deps</code>，会出现以下错误：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">➜  cpp-demo git:(master) ✗ make deps</div><div class="line">git submodule update --init --recursive</div><div class="line">mkdir out</div><div class="line">mkdir: out: File exists</div><div class="line">make: *** [deps] Error 1</div><div class="line">➜  cpp-demo git:(master)</div></pre></td></tr></table></figure></p>
+<p>为了消除这个错误提示，我们可以在<code>mkdir out</code>加入参数<code>-p</code>:<code>mkdir -p out</code>。<br>这样就不会提示错误了。</p>
+
+        
+      
     </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          <a class="post-link" href="/2017/11/10/pip下载超时解决方案/">pip国内下载失败超时等问题的解决方案</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2017-11-10
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/学习/">学习</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+
+        
+          <p>可以通过国内开源镜像来下载python的库,操作步骤如下：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mkdir ~/.pip</div><div class="line">vim ~/.pip/pip.conf</div></pre></td></tr></table></figure></p>
+<p>pip.conf内容如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[global]</div><div class="line">index-url = https://pypi.mirrors.ustc.edu.cn/simple</div></pre></td></tr></table></figure></p>
+
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          <a class="post-link" href="/2017/11/08/交叉编译工具远程调试总结/">交叉编译工具远程调试小结</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2017-11-08
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/学习/">学习</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+
+        
+          <blockquote>
+<p>我们在开发ARM板子C/C++项目过程中，我们会需要查找定位BUG，一种方式是通过网络发送日志；另一种方式是通过调试方式，而很多板子没有执行GDB性能，<br>因此我们需要远程调试的方式来进行调试。现在总结下项目中使用的两种方式。</p>
+</blockquote>
+<h2 id="调试可执行程序"><a href="#调试可执行程序" class="headerlink" title="调试可执行程序"></a>调试可执行程序</h2><ol>
+<li>环境准备：一台装有交叉编译工具链的机器A，一般是linux操作系统的机器；被调试程序的机器B上装有gdbserver</li>
+<li>首先拷贝调试所需要的库及可执行程序到机器A上(【注】需要no-strip，带debug信息的库和可执行程序，可以通过<code>file</code>或<code>info shared</code>查看)</li>
+<li><p>A机器准备gdb启动脚本.gdbinit，模板类似于：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">set solid-search-path [调试库目录]</div><div class="line">file [需要调试可执行程序]</div><div class="line">target remote [调试可执行程序的机器ip]:[gdbserver暴露出来的端口号]</div></pre></td></tr></table></figure>
+</li>
+<li><p>B机器准备gdbserver启动脚本，模板类似于：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gdbserver :[暴露出来的端口号] 可执行程序</div></pre></td></tr></table></figure>
+</li>
+<li><p>A机器gdb启动后，紧接着启动B机器脚本；这个时候A机器的gdb窗口进入可调试状态，我们可以设置断点或者查看线程栈信息，输入<code>c</code>程序继续执行，<code>Ctrl-c</code>进入打断状态</p>
+</li>
+</ol>
+<h2 id="调试正在运行的进程"><a href="#调试正在运行的进程" class="headerlink" title="调试正在运行的进程"></a>调试正在运行的进程</h2><ol>
+<li>调试环境、拷贝相关库及可执行程序、A机器准备的gdb脚本和调试可执行程序相同，只是通过attach的方式来调试</li>
+<li>A机器gdb启动后，紧接着B机器执行如下命令：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gdbserver :[暴露出来的端口号] --attach [进程ID]</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>这个时候A机器的gdb窗口进入可调试状态。</p>
+<p>这两种方式各有各的使用场景：<strong>调试可执行程序</strong>适合调试进程启动时候出现的BUG，<strong>调试正在运行的进程</strong>适合调试进程BUG已经出现的场景。</p>
+
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          <a class="post-link" href="/2017/11/07/git status中文显示不出来问题修复/">git status中文显示不对问题修复</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2017-11-07
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/学习/">学习</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+
+        
+          <p>如题，我的mac上git status显示<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">➜  hexo git:(master) ✗ gst</div><div class="line">On branch master</div><div class="line">Changes not staged for commit:</div><div class="line">  (use &quot;git add/rm &lt;file&gt;...&quot; to update what will be committed)</div><div class="line">  (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)</div><div class="line">  (commit or discard the untracked or modified content in submodules)</div><div class="line"></div><div class="line">	modified:   _config.yml</div><div class="line">	modified:   package-lock.json</div><div class="line">	modified:   package.json</div><div class="line">	deleted:    source/_posts/hello-world.md</div><div class="line">	deleted:    &quot;source/_posts/\346\265\213\350\257\225\344\275\277\347\224\250-md.md&quot;</div><div class="line">	deleted:    &quot;source/_posts/\347\254\254\344\272\214\344\270\252\346\265\213\350\257\225.md&quot;</div><div class="line">	modified:   themes/maupassant (modified content)</div><div class="line">	modified:   themes/next (untracked content)</div><div class="line"></div><div class="line">Untracked files:</div><div class="line">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)</div><div class="line"></div><div class="line">	&quot;source/_posts/emacs\346\217\222\345\205\245\345\275\223\345\211\215\346\227\266\351\227\264\346\210\263.md&quot;</div><div class="line">	&quot;source/_posts/\344\277\256\345\244\215GO\345\214\205\347\256\241\347\220\206\345\267\245\345\205\267GLIDE\344\270\215\350\203\275\350\256\277\351\227\256golang.org\347\232\204\346\233\277\344\273\243\346\226\271\346\241\210.md&quot;</div><div class="line">	source/about/</div><div class="line"></div><div class="line">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</div></pre></td></tr></table></figure></p>
+<p>修复方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#不对0x80以上的字符进行quote，解决git status/commit时中文文件名乱码</div><div class="line">git config --global core.quotepath false</div></pre></td></tr></table></figure></p>
+<p>再次git status就显示OK了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">➜  hexo git:(master) ✗ gst</div><div class="line">On branch master</div><div class="line">Changes not staged for commit:</div><div class="line">  (use &quot;git add/rm &lt;file&gt;...&quot; to update what will be committed)</div><div class="line">  (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)</div><div class="line">  (commit or discard the untracked or modified content in submodules)</div><div class="line"></div><div class="line">	modified:   _config.yml</div><div class="line">	modified:   package-lock.json</div><div class="line">	modified:   package.json</div><div class="line">	deleted:    source/_posts/hello-world.md</div><div class="line">	deleted:    source/_posts/测试使用-md.md</div><div class="line">	deleted:    source/_posts/第二个测试.md</div><div class="line">	modified:   themes/maupassant (modified content)</div><div class="line">	modified:   themes/next (untracked content)</div><div class="line"></div><div class="line">Untracked files:</div><div class="line">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)</div><div class="line"></div><div class="line">	source/_posts/emacs插入当前时间戳.md</div><div class="line">	source/_posts/修复GO包管理工具GLIDE不能访问golang.org的替代方案.md</div><div class="line">	source/about/</div><div class="line"></div><div class="line">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</div></pre></td></tr></table></figure></p>
+
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          <a class="post-link" href="/2017/11/07/emacs插入当前时间戳/">emacs插入当前时间戳</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2017-11-07
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/学习/">学习</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+
+        
+          <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">C-u M-! date</div></pre></td></tr></table></figure>
+
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          <a class="post-link" href="/2017/11/07/修复GO包管理工具GLIDE不能访问golang.org的替代方案/">glide不能下载golang.org/x包的替代方案</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2017-11-07
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/学习/">学习</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+
+        
+          <blockquote>
+<p>glide是go的一个包管理工具，可以直接扫描工程管理import依赖。而golang.org/x下的包是viper、logrus等github开源包的依赖，国内又不能访问。一个好消息是golang.org/x在github上有镜像(github.com/golang)。下面是我尝试成功的替代方案。</p>
+</blockquote>
+<p>如果go工程中有golang.org/x/net的依赖，就可以在glide.yaml中加入以下配置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">- package: golang.org/x/net</div><div class="line">  repo:    https://github.com:golang/net.git</div><div class="line">  vcs:     git</div></pre></td></tr></table></figure></p>
+<p>这样<code>glide install/update</code>就可以从github.com镜像中下载相关库了。</p>
+<p>另一种方式通过代理的方式配置go下载：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span>127.0.0.1:9999是sock5代理地址</div><div class="line">alias go="http_proxy=socks5://127.0.0.1:9999 https_proxy=socks5://127.0.0.1:9999 go"</div></pre></td></tr></table></figure></p>
+
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    
+    
+  </nav>
+
+
+          </div>
+          
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
   </div>
-</header>
-
-    <main class="app-body">
-  
-    <article class="article-card">
-      <h2 class="article-head">
-        <a href="/2017/11/16/golang目录结构与工具/">golang目录结构及工具</a>
-      </h2>
-      <p class="article-date">2017年11月16日</p>
-      
-        
-  <a href="/tags#golang" >
-    <span class="tag-code">golang</span>
-  </a>
-
-      
-      <div class="article-summary">
-        
-          
-在开发golang组件的时候需要版本管理及组件管理，自己形成了一套模式框架，对于常规项目开发可以方便套用。
-
-工具
-使用glide工具进行第三方版本包管理，不用依赖环境变量$GOPATH
-使用makefile作为脚本工具，进行下载三方包，构建，打包
-使用emacs+gocode来进行代码编 ...
-        
-      </div>
-      <a class="more" href="/2017/11/16/golang目录结构与工具/">Read more</a>
-    </article>
-  
-    <article class="article-card">
-      <h2 class="article-head">
-        <a href="/2017/11/13/Makefile中创建已存在目录提示错误的解决方案/">Makefile中重复创建目录提示错误的解决方案</a>
-      </h2>
-      <p class="article-date">2017年11月13日</p>
-      
-        
-  <a href="/tags#makefile" >
-    <span class="tag-code">makefile</span>
-  </a>
-
-      
-      <div class="article-summary">
-        
-          如题，我们经常需要在构建脚本Makefile中创建目录。例如下面一段脚本：1234567891011deps:	git submodule update --init --recursive	mkdir -p outbuild:	cd out &amp;&amp; cmake -DBUILD ...
-        
-      </div>
-      <a class="more" href="/2017/11/13/Makefile中创建已存在目录提示错误的解决方案/">Read more</a>
-    </article>
-  
-    <article class="article-card">
-      <h2 class="article-head">
-        <a href="/2017/11/10/pip下载超时解决方案/">pip国内下载失败超时等问题的解决方案</a>
-      </h2>
-      <p class="article-date">2017年11月10日</p>
-      
-        
-  <a href="/tags#python" >
-    <span class="tag-code">python</span>
-  </a>
-
-      
-      <div class="article-summary">
-        
-          可以通过国内开源镜像来下载python的库,操作步骤如下：12mkdir ~/.pipvim ~/.pip/pip.conf
-pip.conf内容如下：12[global]index-url = https://pypi.mirrors.ustc.edu.cn/simple
-
-        
-      </div>
-      <a class="more" href="/2017/11/10/pip下载超时解决方案/">Read more</a>
-    </article>
-  
-    <article class="article-card">
-      <h2 class="article-head">
-        <a href="/2017/11/08/交叉编译工具远程调试总结/">交叉编译工具远程调试小结</a>
-      </h2>
-      <p class="article-date">2017年11月8日</p>
-      
-        
-  <a href="/tags#gdb" >
-    <span class="tag-code">gdb</span>
-  </a>
-
-      
-      <div class="article-summary">
-        
-          
-我们在开发ARM板子C/C++项目过程中，我们会需要查找定位BUG，一种方式是通过网络发送日志；另一种方式是通过调试方式，而很多板子没有执行GDB性能，因此我们需要远程调试的方式来进行调试。现在总结下项目中使用的两种方式。
-
-调试可执行程序
-环境准备：一台装有交叉编译工具链的机器A，一般是 ...
-        
-      </div>
-      <a class="more" href="/2017/11/08/交叉编译工具远程调试总结/">Read more</a>
-    </article>
-  
-    <article class="article-card">
-      <h2 class="article-head">
-        <a href="/2017/11/07/git status中文显示不出来问题修复/">git status中文显示不对问题修复</a>
-      </h2>
-      <p class="article-date">2017年11月7日</p>
-      
-        
-  <a href="/tags#git" >
-    <span class="tag-code">git</span>
-  </a>
-
-      
-      <div class="article-summary">
-        
-          如题，我的mac上git status显示123456789101112131415161718192021222324➜  hexo git:(master) ✗ gstOn branch masterChanges not staged for commit:  (use &quot;g ...
-        
-      </div>
-      <a class="more" href="/2017/11/07/git status中文显示不出来问题修复/">Read more</a>
-    </article>
-  
-    <article class="article-card">
-      <h2 class="article-head">
-        <a href="/2017/11/07/emacs插入当前时间戳/">emacs插入当前时间戳</a>
-      </h2>
-      <p class="article-date">2017年11月7日</p>
-      
-        
-  <a href="/tags#emacs" >
-    <span class="tag-code">emacs</span>
-  </a>
-
-      
-      <div class="article-summary">
-        
-          1C-u M-! date
-
-        
-      </div>
-      <a class="more" href="/2017/11/07/emacs插入当前时间戳/">Read more</a>
-    </article>
-  
-    <article class="article-card">
-      <h2 class="article-head">
-        <a href="/2017/11/07/修复GO包管理工具GLIDE不能访问golang.org的替代方案/">glide不能下载golang.org/x包的替代方案</a>
-      </h2>
-      <p class="article-date">2017年11月7日</p>
-      
-        
-  <a href="/tags#golang" >
-    <span class="tag-code">golang</span>
-  </a>
-
-  <a href="/tags#glide" >
-    <span class="tag-code">glide</span>
-  </a>
-
-      
-      <div class="article-summary">
-        
-          
-glide是go的一个包管理工具，可以直接扫描工程管理import依赖。而golang.org/x下的包是viper、logrus等github开源包的依赖，国内又不能访问。一个好消息是golang.org/x在github上有镜像(github.com/golang)。下面是我尝试成功的 ...
-        
-      </div>
-      <a class="more" href="/2017/11/07/修复GO包管理工具GLIDE不能访问golang.org的替代方案/">Read more</a>
-    </article>
-  
-
-  
-</main>
 
 
-    <div class="scroll-top">
-  <span class="arrow-icon"></span>
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2015 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">chen chuanyin</span>
+  </span>
 </div>
-    <footer class="app-footer">
-  <p class="copyright">
-    &copy; 2018 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
-    <br>
-    Theme by <a href="https://github.com/yanm1ng">yanm1ng</a>
-  </p>
-</footer>
 
-<script>
-  function async(u, c) {
-    var d = document, t = 'script',
-      o = d.createElement(t),
-      s = d.getElementsByTagName(t)[0];
-    o.src = u;
-    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-    s.parentNode.insertBefore(o, s);
-  }
-</script>
-<script>
-  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
-    FastClick.attach(document.body);
-  })
-</script>
+      </footer>
 
-<script>
-  var hasLine = 'true';
-  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
-    $('figure pre').each(function(i, block) {
-      var figure = $(this).parents('figure');
-      if (hasLine === 'false') {
-        figure.find('.gutter').hide();
-      }
-      var lang = figure.attr('class').split(' ')[1] || 'code';
-      var codeHtml = $(this).html();
-      var codeTag = document.createElement('code');
-      codeTag.className = lang;
-      codeTag.innerHTML = codeHtml;
-      $(this).attr('class', '').empty().html(codeTag);
-      figure.attr('data-lang', lang.toUpperCase());
-      hljs.highlightBlock(block);
-    });
-  })
-</script>
-<!-- Baidu Tongji -->
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
 
-<script src="/js/script.js"></script>
+    
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.6.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.6.0"></script>
+
   </body>
 </html>
