@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chenchuanyin.github.io/"/>
-  <updated>2018-01-02T08:14:20.973Z</updated>
+  <updated>2017-11-16T04:02:44.529Z</updated>
   <id>http://chenchuanyin.github.io/</id>
   
   <author>
@@ -15,35 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>2017年年终总结</title>
-    <link href="http://chenchuanyin.github.io/2018/01/02/2017%E5%B9%B4%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/"/>
-    <id>http://chenchuanyin.github.io/2018/01/02/2017年年终总结/</id>
-    <published>2018-01-02T01:22:50.263Z</published>
-    <updated>2018-01-02T08:14:20.973Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>这一年总共做了两件重要的事情：换了项目组和把终身大事解决了。</p></blockquote><h1 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h1><ul><li>这一年锻炼少了很多，结了婚后运动都抛在脑后了，体能也降低很多，2018年需要指定计划来运动</li><li>技术之外的书籍读得太少，手机和游戏<br>2.<br>3.<br>4.<br>5.<br>6.<br>7.</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;这一年总共做了两件重要的事情：换了项目组和把终身大事解决了。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1 id=&quot;生活&quot;&gt;&lt;a href=&quot;#生活&quot; class=&quot;headerlink&quot; title=&quot;生活&quot;&gt;&lt;/a&gt;生活&lt;/h1&gt;&lt;ul&gt;
-&lt;li
-      
-    
-    </summary>
-    
-      <category term="学习" scheme="http://chenchuanyin.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="gdb" scheme="http://chenchuanyin.github.io/tags/gdb/"/>
-    
-  </entry>
   
   <entry>
     <title>golang目录结构及工具</title>
